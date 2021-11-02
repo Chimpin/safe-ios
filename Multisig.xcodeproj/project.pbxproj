@@ -597,6 +597,8 @@
 		55F9B7A026D66630003D1C68 /* LedgerPendingConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55F9B79F26D66630003D1C68 /* LedgerPendingConfirmationViewController.xib */; };
 		55F9B7A226D6665C003D1C68 /* LedgerPendingConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F9B7A126D6665C003D1C68 /* LedgerPendingConfirmationViewController.swift */; };
 		55FBC2D526BA91E4002C2553 /* SelectLedgerDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBC2D426BA91E4002C2553 /* SelectLedgerDeviceViewController.swift */; };
+		931A592A27314C6E003E0F8E /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931A592827314C6B003E0F8E /* StartViewController.swift */; };
+		931A592B27314C6E003E0F8E /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 931A592927314C6E003E0F8E /* StartViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1218,6 +1220,8 @@
 		55F9B79F26D66630003D1C68 /* LedgerPendingConfirmationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LedgerPendingConfirmationViewController.xib; sourceTree = "<group>"; };
 		55F9B7A126D6665C003D1C68 /* LedgerPendingConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedgerPendingConfirmationViewController.swift; sourceTree = "<group>"; };
 		55FBC2D426BA91E4002C2553 /* SelectLedgerDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLedgerDeviceViewController.swift; sourceTree = "<group>"; };
+		931A592827314C6B003E0F8E /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		931A592927314C6E003E0F8E /* StartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2339,6 +2343,8 @@
 				0468EE9C26148A3B008270BF /* PrivacyProtectionScreenViewController.xib */,
 				0471B3BB262742CD001F2D3B /* UpdateAppViewController.swift */,
 				0471B3BC262742CD001F2D3B /* UpdateAppViewController.xib */,
+				931A592827314C6B003E0F8E /* StartViewController.swift */,
+				931A592927314C6E003E0F8E /* StartViewController.xib */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -3099,6 +3105,7 @@
 				0471B3BE262742CD001F2D3B /* UpdateAppViewController.xib in Resources */,
 				04B4B68F25B8857F00CFE24B /* AccountInfoView.xib in Resources */,
 				0A86EE6F25CC2B4C0059876E /* RetryFooterView.xib in Resources */,
+				931A592B27314C6E003E0F8E /* StartViewController.xib in Resources */,
 				0AE8C06B2579371A00E62B34 /* DetailTransferInfoCell.xib in Resources */,
 				55F9B7A026D66630003D1C68 /* LedgerPendingConfirmationViewController.xib in Resources */,
 				0AE5A9C3267A4BDC00468C90 /* ImportKeyBannerCell.xib in Resources */,
@@ -3359,6 +3366,7 @@
 				0AC5F56B25DD4A4B00DEF0D7 /* AuthenticationController.swift in Sources */,
 				550FB1CA26691E7500C13D54 /* SafeContract.swift in Sources */,
 				550FB1C426691E1500C13D54 /* ConnectWalletViewController.swift in Sources */,
+				931A592A27314C6E003E0F8E /* StartViewController.swift in Sources */,
 				0A616B9B26AEFD4B00FCEDB9 /* MultisigNotification.swift in Sources */,
 				048B3B0E25A5E7AB0005219B /* EditSafeNameViewController.swift in Sources */,
 				0AF2733D24DABAAF007E4012 /* AppDelegate+Messaging.swift in Sources */,
@@ -3792,6 +3800,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: Ford Jäckel (5VXULJZVFM)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -3854,6 +3863,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: Ford Jäckel (5VXULJZVFM)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -4044,6 +4054,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: Ford Jäckel (5VXULJZVFM)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -4173,6 +4184,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: Ford Jäckel (5VXULJZVFM)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -4722,6 +4734,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: Ford Jäckel (5VXULJZVFM)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -4847,6 +4860,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: Ford Jäckel (5VXULJZVFM)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
