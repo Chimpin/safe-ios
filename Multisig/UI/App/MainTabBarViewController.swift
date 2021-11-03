@@ -67,6 +67,16 @@ class MainTabBarViewController: UITabBarController {
         appearsFirstTime = false
 
         onFirstAppear(self)
+
+        // show the start vc
+
+        // initialize / create the VC object
+        let startVC = StartViewController()
+
+        // present it from this view controller
+            // show the startVC modally
+            // when the tab bar VC will be visible on the screen <-- viewDidAppear
+        present(startVC, animated: true)
     }
     
     private func balancesTabViewController() -> UIViewController {

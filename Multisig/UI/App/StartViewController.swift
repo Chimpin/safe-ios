@@ -10,9 +10,33 @@ import UIKit
 
 class StartViewController: UIViewController {
 
+    @IBOutlet weak var openButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+
+    @IBAction func didTapOpen(_ sender: Any) {
+
+        // the new screen will be a navigation stack
+            // the root of stack will be the StartVC
+        let rootVC = StartViewController(nibName: nil, bundle: nil)
+
+        let vc = UINavigationController(rootViewController: rootVC)
+
+        // open new screen modally
+        present(vc, animated: true, completion: nil)
+    }
+
+    // add new button in the xib
+    // connect it to the action in the file
+    // inside the action function create new "StartVC" instance and push it in the navigation stack using "show()" method
+
+    @IBAction func didTapPush(_ sender: Any) {
+        let startVC = StartViewController(nibName: nil, bundle: nil)
+        show(startVC, sender: nil)
+    }
+
 }

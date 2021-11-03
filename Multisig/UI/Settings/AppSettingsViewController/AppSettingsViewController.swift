@@ -225,7 +225,12 @@ class AppSettingsViewController: UITableViewController {
             showAddressBook()
             
         case Section.App.passcode:
-            openPasscode()
+//            openPasscode()
+            let startVC = StartViewController()
+            // push in navigation stack
+            show(startVC, sender: self)
+            // modally
+//            present(startVC, animated: true)
 
         case Section.App.appearance:
             let appearanceViewController = ChangeDisplayModeTableViewController()

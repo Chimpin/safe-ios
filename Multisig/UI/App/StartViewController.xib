@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartViewController" customModule="Multisig" customModuleProvider="target">
             <connections>
+                <outlet property="openButton" destination="KHt-sL-jf6" id="GlA-r7-7hS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -39,18 +40,33 @@
                         <constraint firstAttribute="height" constant="56" id="x2H-5r-T5j"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Open"/>
+                    <connections>
+                        <action selector="didTapOpen:" destination="-1" eventType="touchUpInside" id="pfj-Kx-AQc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5y-wS-ZPs">
+                    <rect key="frame" x="16" y="669" width="382" height="56"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Push"/>
+                    <connections>
+                        <action selector="didTapPush:" destination="-1" eventType="touchUpInside" id="kwS-66-rtV"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="e5y-wS-ZPs" firstAttribute="trailing" secondItem="KHt-sL-jf6" secondAttribute="trailing" id="0IG-yx-ZfQ"/>
                 <constraint firstItem="sAP-dE-U8H" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="G8B-T6-fwo"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sAP-dE-U8H" secondAttribute="trailing" constant="16" id="K4O-G1-YXI"/>
                 <constraint firstItem="KHt-sL-jf6" firstAttribute="top" secondItem="sAP-dE-U8H" secondAttribute="bottom" constant="25" id="Mye-8R-JyI"/>
+                <constraint firstItem="e5y-wS-ZPs" firstAttribute="height" secondItem="KHt-sL-jf6" secondAttribute="height" id="NGz-RM-aQN"/>
                 <constraint firstItem="sAP-dE-U8H" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="cBX-jf-EEj"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KHt-sL-jf6" secondAttribute="trailing" constant="16" id="dTQ-kp-543"/>
+                <constraint firstItem="e5y-wS-ZPs" firstAttribute="leading" secondItem="KHt-sL-jf6" secondAttribute="leading" id="deW-mr-ZDv"/>
                 <constraint firstItem="KHt-sL-jf6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="n7U-Ok-cEf"/>
+                <constraint firstItem="e5y-wS-ZPs" firstAttribute="top" secondItem="KHt-sL-jf6" secondAttribute="bottom" constant="54.5" id="uOu-j7-a8C"/>
             </constraints>
             <point key="canvasLocation" x="139" y="134"/>
         </view>
