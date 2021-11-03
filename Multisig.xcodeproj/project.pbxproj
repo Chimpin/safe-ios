@@ -143,6 +143,8 @@
 		0A22E11C25E4FA2000D24DE1 /* PasscodeSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A22E11B25E4FA2000D24DE1 /* PasscodeSettingsViewController.swift */; };
 		0A22E12725E4FA3200D24DE1 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A22E12525E4FA3200D24DE1 /* SwitchTableViewCell.swift */; };
 		0A22E12825E4FA3200D24DE1 /* SwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A22E12625E4FA3200D24DE1 /* SwitchTableViewCell.xib */; };
+		0A28A552273149C900C2BAE0 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A28A550273149C900C2BAE0 /* StartViewController.swift */; };
+		0A28A553273149C900C2BAE0 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A28A551273149C900C2BAE0 /* StartViewController.xib */; };
 		0A29B5622666808A0060F06A /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 0A29B5612666808A0060F06A /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		0A2A3A6D26AEBA50005FAEB7 /* SwiftCryptoTokenFormatter in Frameworks */ = {isa = PBXBuildFile; productRef = 0A2A3A6C26AEBA50005FAEB7 /* SwiftCryptoTokenFormatter */; settings = {ATTRIBUTES = (Required, ); }; };
 		0A2F1A6E267A538E00C09F03 /* GSLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2F1A6D267A538E00C09F03 /* GSLabel.swift */; };
@@ -770,6 +772,8 @@
 		0A22E11B25E4FA2000D24DE1 /* PasscodeSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeSettingsViewController.swift; sourceTree = "<group>"; };
 		0A22E12525E4FA3200D24DE1 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		0A22E12625E4FA3200D24DE1 /* SwitchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchTableViewCell.xib; sourceTree = "<group>"; };
+		0A28A550273149C900C2BAE0 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		0A28A551273149C900C2BAE0 /* StartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
 		0A2F1A6D267A538E00C09F03 /* GSLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSLabel.swift; sourceTree = "<group>"; };
 		0A2F1A6F267A53A800C09F03 /* GSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSButton.swift; sourceTree = "<group>"; };
 		0A2F1A72267A5E5B00C09F03 /* BalanceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceCell.swift; sourceTree = "<group>"; };
@@ -2339,6 +2343,8 @@
 				0468EE9C26148A3B008270BF /* PrivacyProtectionScreenViewController.xib */,
 				0471B3BB262742CD001F2D3B /* UpdateAppViewController.swift */,
 				0471B3BC262742CD001F2D3B /* UpdateAppViewController.xib */,
+				0A28A550273149C900C2BAE0 /* StartViewController.swift */,
+				0A28A551273149C900C2BAE0 /* StartViewController.xib */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -3141,6 +3147,7 @@
 				0A6886ED258908150045CAB5 /* GNOTextField.xib in Resources */,
 				049A9D3B25F81F2C00CA5723 /* EditOwnerKeyViewController.xib in Resources */,
 				0ADD19A8265E53C600EB0F2B /* QRCodeView.xib in Resources */,
+				0A28A553273149C900C2BAE0 /* StartViewController.xib in Resources */,
 				0A2F1A78267A5E5B00C09F03 /* TotalCell.xib in Resources */,
 				04273E6226D43F1700A14E95 /* IdenticonView.xib in Resources */,
 				0A8AEB1125A4712B002A3FE1 /* ActionDetailTextCell.xib in Resources */,
@@ -3326,6 +3333,7 @@
 				0A451BF0252DDB49001DB7D2 /* NoDataView.swift in Sources */,
 				55F9B7A226D6665C003D1C68 /* LedgerPendingConfirmationViewController.swift in Sources */,
 				0A57C8E92587AECB00B7C019 /* EnterSafeAddressViewController.swift in Sources */,
+				0A28A552273149C900C2BAE0 /* StartViewController.swift in Sources */,
 				0A616B9626AEEBB700FCEDB9 /* BoolString.swift in Sources */,
 				0A81E310246C062400425DEF /* Icons.swift in Sources */,
 				0AD062E62577AE7E0030810D /* TransactionDetailCellBuilder.swift in Sources */,
