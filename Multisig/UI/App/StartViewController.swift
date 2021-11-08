@@ -10,6 +10,8 @@ import UIKit
 
 class StartViewController: UIViewController {
 
+    @IBOutlet var chainNameLabel: UILabel!
+
     @IBAction func buttonPressed() {
         print("buttonPressed() | called")
         let alert = UIAlertController(
@@ -31,7 +33,11 @@ class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let chain = Chain.getByName(name: "Polygon") {
+            let chainName = chain.name!
+            let chainId = chain.id!
+            chainNameLabel.text = "Name: \(chainName), ChainId: \(chainId)"
+        }
         // Do any additional setup after loading the view.
     }
 }

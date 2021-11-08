@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartViewController" customModule="Multisig" customModuleProvider="target">
             <connections>
+                <outlet property="chainNameLabel" destination="vId-AR-kxE" id="N6k-GZ-AfF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -41,6 +42,13 @@
                         <action selector="buttonPressed" destination="-1" eventType="touchUpInside" id="TZA-PB-uXP"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ChainName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vId-AR-kxE">
+                    <rect key="frame" x="54" y="73" width="290" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -52,7 +60,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pyC-48-GCP" secondAttribute="trailing" constant="16" id="XPe-Xa-9Sd"/>
                 <constraint firstItem="pyC-48-GCP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="jJp-xI-CP3"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="116"/>
+            <point key="canvasLocation" x="138.40000000000001" y="115.59220389805098"/>
         </view>
     </objects>
     <resources>

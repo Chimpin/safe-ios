@@ -259,3 +259,28 @@ extension Chain {
         theme?.backgroundColor.flatMap(UIColor.init(hex:))
     }
 }
+
+
+extension Chain {
+
+    static func getByName(name: String) -> Chain? {
+        // create fetch request
+        let fr = Chain.fetchRequest().by(name: name)
+    
+        // get context
+        let context = App.shared.coreDataStack.viewContext
+        
+        // fetch from context
+        // return result
+        return try? context.fetch(fr).first
+    }
+}
+
+extension NSFetchRequest where ResultType == Chain {
+    func by(name: String) -> Self {
+            sortDescriptors = []
+            predicate = NSPredicate(format: "name == %@", name)
+            fetchLimit = 1
+            return self
+        }
+}
