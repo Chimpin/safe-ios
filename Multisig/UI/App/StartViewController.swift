@@ -34,21 +34,41 @@ class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let chainName = "Polygon"
+        //        let chainName = "Polygon"
+        //
+        //        myClosure = { [weak self] (name :String) in
+        //            guard let self = self else { return }
+        //            if let chain = Chain.getByName(name: name) {
+        //                let chainName = chain.name! // shadowing ok?
+        //                let chainId = chain.id!
+        //                let rpcUrl = chain.rpcUrl!
+        //                self.chainNameLabel.text = "Name: \(chainName), ChainId: \(chainId),\nrpcUrl: \(rpcUrl)"
+        //            } else {
+        //                self.chainNameLabel.text = "Chain [\(name)] not found!"
+        //            }
+        //        }
+        //
+        //        myClosure(chainName)
         
-//        myClosure = { [weak self] (name :String) in
-//            guard let self = self else { return }
-//            if let chain = Chain.getByName(name: name) {
-//                let chainName = chain.name! // shadowing ok?
-//                let chainId = chain.id!
-//                let rpcUrl = chain.rpcUrl!
-//                self.chainNameLabel.text = "Name: \(chainName), ChainId: \(chainId),\nrpcUrl: \(rpcUrl)"
-//            } else {
-//                self.chainNameLabel.text = "Chain [\(name)] not found!"
-//            }
-//        }
-//
-//        myClosure(chainName)
+        let cgw = App.shared.clientGatewayService
+        cgw.asyncChains { [weak self] result in
+            switch result {
+            case .success(let response):
+                if let chain: SCGModels.Chain = response.results.first {
+                    DispatchQueue.main.async {
+                        print("Chain: \(chain)")
+                        if let self = self {
+                            self.chainNameLabel.text = chain.chainName
+                        } else {
+                            // no self
+                        }
+                    }
+                }
+                
+            case .failure(let error):
+                print("error: \(error)")
+            }
+        }
         
         
         // Do any additional setup after loading the view.
