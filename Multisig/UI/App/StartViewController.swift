@@ -33,10 +33,14 @@ class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let chain = Chain.getByName(name: "Polygon") {
-            let chainName = chain.name!
+        let chainName = "Rinkeby"
+        if let chain = Chain.getByName(name: chainName) {
+            let chainName = chain.name! // shadowing ok?
             let chainId = chain.id!
-            chainNameLabel.text = "Name: \(chainName), ChainId: \(chainId)"
+            let rpcUrl = chain.rpcUrl!
+            chainNameLabel.text = "Name: \(chainName), ChainId: \(chainId),\nrpcUrl: \(rpcUrl)" // Why is setting lines not enough to make UILabel multiline?
+        } else {
+            chainNameLabel.text = "Chain [\(chainName)] not found!"
         }
         // Do any additional setup after loading the view.
     }
