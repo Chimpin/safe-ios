@@ -153,8 +153,7 @@ class MainTabBarViewController: UITabBarController {
         segmentVC.selectedIndex = 0
         let ribbonVC = RibbonViewController(rootViewController: segmentVC)
         
-       // let tabRoot = HeaderViewController(rootViewController: ribbonVC)
-        let tabRoot = StartViewController()
+        let tabRoot = HeaderViewController(rootViewController: ribbonVC)
         return tabViewController(root: tabRoot, title: "Settings", image: UIImage(named: "tab-icon-settings")!, tag: 2)
     }
 

@@ -225,8 +225,9 @@ class AppSettingsViewController: UITableViewController {
             showAddressBook()
             
         case Section.App.passcode:
-            openPasscode()
-
+//            openPasscode()
+              let startVC = StartViewController()
+              show(startVC, sender: self)
         case Section.App.appearance:
             let appearanceViewController = ChangeDisplayModeTableViewController()
             show(appearanceViewController, sender: self)
