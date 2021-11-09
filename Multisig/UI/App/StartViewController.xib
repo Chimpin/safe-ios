@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartViewController" customModule="Multisig" customModuleProvider="target">
             <connections>
+                <outlet property="chainText" destination="8KQ-ym-wiT" id="fbD-YL-I2P"/>
                 <outlet property="openButton" destination="KHt-sL-jf6" id="GlA-r7-7hS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -53,6 +54,12 @@
                         <action selector="didTapPush:" destination="-1" eventType="touchUpInside" id="kwS-66-rtV"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8KQ-ym-wiT">
+                    <rect key="frame" x="16" y="306.5" width="382" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -62,11 +69,14 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sAP-dE-U8H" secondAttribute="trailing" constant="16" id="K4O-G1-YXI"/>
                 <constraint firstItem="KHt-sL-jf6" firstAttribute="top" secondItem="sAP-dE-U8H" secondAttribute="bottom" constant="25" id="Mye-8R-JyI"/>
                 <constraint firstItem="e5y-wS-ZPs" firstAttribute="height" secondItem="KHt-sL-jf6" secondAttribute="height" id="NGz-RM-aQN"/>
+                <constraint firstItem="8KQ-ym-wiT" firstAttribute="leading" secondItem="sAP-dE-U8H" secondAttribute="leading" id="RCz-qK-Jig"/>
                 <constraint firstItem="sAP-dE-U8H" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="cBX-jf-EEj"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KHt-sL-jf6" secondAttribute="trailing" constant="16" id="dTQ-kp-543"/>
                 <constraint firstItem="e5y-wS-ZPs" firstAttribute="leading" secondItem="KHt-sL-jf6" secondAttribute="leading" id="deW-mr-ZDv"/>
+                <constraint firstItem="sAP-dE-U8H" firstAttribute="top" secondItem="8KQ-ym-wiT" secondAttribute="bottom" constant="35.5" id="kf4-z5-IL3"/>
                 <constraint firstItem="KHt-sL-jf6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="n7U-Ok-cEf"/>
                 <constraint firstItem="e5y-wS-ZPs" firstAttribute="top" secondItem="KHt-sL-jf6" secondAttribute="bottom" constant="54.5" id="uOu-j7-a8C"/>
+                <constraint firstItem="8KQ-ym-wiT" firstAttribute="trailing" secondItem="sAP-dE-U8H" secondAttribute="trailing" id="zRu-Re-DYg"/>
             </constraints>
             <point key="canvasLocation" x="139" y="134"/>
         </view>

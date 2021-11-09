@@ -45,6 +45,20 @@ extension Chain {
         return chain
     }
 
+    static func by(name: String) -> Chain? {
+        let context = App.shared.coreDataStack.viewContext
+        let fr = Chain.fetchRequest()
+        fr.predicate = NSPredicate(format: "name == %@", name)
+        fr.fetchLimit = 1
+        fr.sortDescriptors = []
+        do {
+            return try context.fetch(fr).first
+        } catch {
+            print("failed to fetch")
+            return nil
+        }
+    }
+
     static func createOrUpdate(_ chainInfo: SCGModels.Chain) -> Chain {
         guard let chain = Chain.by(chainInfo.id) else {
             // should not fail, otherwise programmer error
