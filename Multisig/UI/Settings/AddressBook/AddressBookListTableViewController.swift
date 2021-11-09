@@ -37,7 +37,10 @@ class AddressBookListTableViewController: LoadableViewController, UITableViewDel
         emptyView.setText("There are no address book entries")
         emptyView.setImage(UIImage(named: "ico-no-address-book")!)
 
-        menuButton = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(showOptionsMenu))
+        menuButton = UIBarButtonItem(image: UIImage.init(systemName: "chevron.down.circle"),
+                                     style: UIBarButtonItem.Style.plain,
+                                     target: self,
+                                     action: #selector(showOptionsMenu))
         navigationItem.rightBarButtonItem = menuButton
 
         for notification in [Notification.Name.selectedSafeChanged, .addressbookChanged] {
@@ -82,7 +85,10 @@ class AddressBookListTableViewController: LoadableViewController, UITableViewDel
                     let activityViewController : UIActivityViewController = UIActivityViewController(
                         activityItems: [exportedFileURL], applicationActivities: nil)
                     activityViewController.completionWithItemsHandler = {(_ , completed, _, _) in
-                        if completed { Tracker.trackEvent(.addressBookExported) }
+                        if completed {
+                            Tracker.trackEvent(.addressBookExported)
+                            App.shared.snackbar.show(message: "Address book entries exported")
+                        }
                     }
                     self.present(activityViewController, animated: true, completion: nil)
                 }
@@ -137,7 +143,7 @@ class AddressBookListTableViewController: LoadableViewController, UITableViewDel
         let cell = tableView.dequeueCell(DetailAccountCell.self)
         let entry = chainEntries[indexPath.section].entries[indexPath.row]
 
-        cell.setAccount(address: entry.addressValue, label: entry.name)
+        cell.setAccount(address: entry.addressValue, label: entry.name, copyEnabled: false, showExternalLink: false)
         return cell
     }
 
