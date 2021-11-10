@@ -4,6 +4,41 @@
 
 import Foundation
 
+// Shortcut to use Log.d("log message")
+class Log {
+    static func d(_ message: String,
+                  error: Error? = nil,
+                  file: StaticString = #file,
+                  line: UInt = #line,
+                  function: StaticString = #function) {
+        LogService.shared.debug(message, error: error, file: file, line: line, function: function)
+    }
+
+    static func i(_ message: String,
+                  error: Error? = nil,
+                  file: StaticString = #file,
+                  line: UInt = #line,
+                  function: StaticString = #function) {
+        LogService.shared.info(message, error: error, file: file, line: line, function: function)
+    }
+
+    static func e(_ message: String,
+                  error: Error? = nil,
+                  file: StaticString = #file,
+                  line: UInt = #line,
+                  function: StaticString = #function) {
+        LogService.shared.error(message, error: error, file: file, line: line, function: function)
+    }
+
+    static func f(_ message: String,
+                  error: Error? = nil,
+                  file: StaticString = #file,
+                  line: UInt = #line,
+                  function: StaticString = #function) {
+        LogService.shared.fatal(message, error: error, file: file, line: line, function: function)
+    }
+}
+
 /// `Logger` provides means to log different types of messages and accompany them with optional Error objects.
 public protocol Logger {
 
