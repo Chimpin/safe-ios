@@ -52,22 +52,20 @@ class StartViewController: UIViewController {
         
         let cgw = App.shared.clientGatewayService
         cgw.asyncChains { [weak self] result in
-            switch result {
-            case .success(let response):
-                if let chain: SCGModels.Chain = response.results.first {
-                    DispatchQueue.main.async {
-                        print("Chain: \(chain)")
-                        if let self = self {
-                            self.chainNameLabel.text = chain.chainName
-                        } else {
-                            // no self
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let response):
+                    if let self = self {
+                        self.chainNameLabel.text = ""
+                        for chain: SCGModels.Chain in response.results {
+                            print("Chain: \(chain.chainName)")
+                            
+                            self.chainNameLabel.text = (self.chainNameLabel.text ?? "") + "/" + chain.chainName
                         }
                     }
-                }
-                
-            case .failure(let error):
-                print("error: \(error)")
-            }
+                case .failure(let error):
+                    print("error: \(error)")
+                }}
         }
         
         
