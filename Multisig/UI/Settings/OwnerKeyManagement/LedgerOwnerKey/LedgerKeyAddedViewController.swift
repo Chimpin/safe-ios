@@ -22,7 +22,7 @@ class LedgerKeyAddedViewController: AccountActionCompletedViewController {
         assert(accountName != nil)
         assert(accountAddress != nil)
 
-        descriptionText = "\(accountName ?? "Key") can't receive push notificaitons without your confirmation.\n\nYou can change this at any time in App Settings - Owner Keys - Key Details."
+        descriptionText = "\(accountName ?? "Key") can't receive push notifications without your confirmation.\n\nYou can change this at any time in App Settings - Owner Keys - Key Details."
 
         primaryActionName = "Confirm to receive push notifications"
         secondaryActionName = "Skip"
@@ -60,6 +60,7 @@ class AddDelegateKeyController {
     }
 
     func start() {
+        Log.d("---> start()")
         // 1. generate a delegate key
         // 16 bit = 12 words
         let delegateSeed = Data.randomBytes(length: 16)!
@@ -74,6 +75,8 @@ class AddDelegateKeyController {
 
         // 3. sign message with ledger key
         sign(message: hashToSign) { [weak self] signResult in
+            Log.d("---> sign(message)")
+
             guard let self = self else { return }
 
             switch signResult {
@@ -193,6 +196,8 @@ class AddDelegateKeyController {
     }
 
     func sendToBackend(delegateAddress: Address, signature: Data, completion: @escaping (Result<Void, Error>) -> Void) {
+        Log.d("---> sendToBackend()")
+
         clientGatewayService.asyncCreateDelegate(safe: nil,
                                                  owner: ownerAddress,
                                                  delegate: delegateAddress,

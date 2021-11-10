@@ -134,13 +134,16 @@ extension BluetoothController: CBCentralManagerDelegate {
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         switch central.state {
         case .poweredOn:
+            Log.d("---> CBCentralManager: central.state: .poweredOn")
             centralManager.retrieveConnectedPeripherals(withServices: supportedDeviceUUIDs).forEach { peripheral in
                 didDiscoverDevice(peripheral)
             }
             centralManager.scanForPeripherals(withServices: supportedDeviceUUIDs)
         case .unauthorized:
+            Log.d("---> CBCentralManager: central.state: .unauthorized")
             delegate?.bluetoothControllerDidFailToConnectBluetooth(error: GSError.BluetoothIsNotAuthorized())
         default:
+            Log.d("---> CBCentralManager: central.state: \(central.state)")
             delegate?.bluetoothControllerDidFailToConnectBluetooth(error: GSError.ProblemConnectingBluetoothDevice())
         }
     }
