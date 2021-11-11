@@ -16,6 +16,8 @@ class LedgerKeyAddedViewController: AccountActionCompletedViewController {
     }
 
     override func viewDidLoad() {
+        Log.d("---> viewDidLoad()")
+
         titleText = "Connect Ledger Nano X"
         headerText = "Owner Key added"
 
@@ -70,7 +72,12 @@ class AddDelegateKeyController {
         // 2. create 'create delegate' message
             // keccak(address + str(int(current_epoch // 3600)))
         let time = String(describing: Int(Date().timeIntervalSince1970) / 3600)
-        let hashString = delegatePrivateKey.address.hexadecimal + time
+        let hashString = delegatePrivateKey.address.checksummed + time
+
+        Log.d("--->       time: \(time)")
+        Log.d("--->   delegate: \(delegatePrivateKey.address.hexadecimal)")
+        Log.d("---> hashString: \(hashString)")
+
         let hashToSign = EthHasher.hash(hashString)
 
         // 3. sign message with ledger key
@@ -202,7 +209,8 @@ class AddDelegateKeyController {
                                                  owner: ownerAddress,
                                                  delegate: delegateAddress,
                                                  signature: signature,
-                                                 label: "iOS Device Delegate") { result in
+                                                 label: "iOS Device Delegate",
+                                                 chainId: chainId) { result in
             completion(result.map { _ in () })
         }
     }

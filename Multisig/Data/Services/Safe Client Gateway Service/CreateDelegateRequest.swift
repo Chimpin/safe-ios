@@ -17,7 +17,8 @@ import Foundation
 /// useful for other convenience features, such as push notifications.
 struct CreateDelegateRequest: JSONRequest {
     var httpMethod: String { "POST" }
-    var urlPath: String { "/delegates/" }
+    var urlPath: String { "/v1/chains/\(chainId)/delegates/" }
+//    var urlPath: String { "/v1/chains/4/delegates/" }
 
     typealias ResponseType = EmptyResponse
 
@@ -29,6 +30,7 @@ struct CreateDelegateRequest: JSONRequest {
     // delegator's signature of hash: keccak(delegate + str(int(current_epoch // 3600)))
     var signature: String
     var label: String
+    let chainId: String
 }
 
 extension SafeClientGatewayService {
@@ -40,13 +42,15 @@ extension SafeClientGatewayService {
         delegate: Address,
         signature: Data,
         label: String,
+        chainId: String,
         completion: @escaping (Result<CreateDelegateRequest.ResponseType, Error>
     ) -> Void) -> URLSessionTask? {
         asyncExecute(request: CreateDelegateRequest(safe: safe?.checksummed,
                                                     delegate: delegate.checksummed,
                                                     delegator: owner.checksummed,
                                                     signature: signature.toHexStringWithPrefix(),
-                                                    label: label),
+                                                    label: label,
+                                                    chainId: chainId),
                      completion: completion)
     }
 }
