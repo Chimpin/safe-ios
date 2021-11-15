@@ -331,7 +331,7 @@
 		0AA9F25924992CB6005BD60F /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA9F25824992CB6005BD60F /* TransactionTests.swift */; };
 		0AB34D5E24B71CF700A43988 /* DateDecodingStrategy+GnosisSafeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB34D5D24B71CF700A43988 /* DateDecodingStrategy+GnosisSafeServices.swift */; };
 		0AB34D6624B71DE300A43988 /* CollectiblesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB34D6524B71DE300A43988 /* CollectiblesRequest.swift */; };
-		0AB38241273C2C3600598307 /* WalletConnectSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0AB38240273C2C3600598307 /* WalletConnectSwift */; };
+		0AB38241273C2C3600598307 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		0AB5DF8F270DD185005BFB43 /* CreateDelegateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5DF8E270DD185005BFB43 /* CreateDelegateRequest.swift */; };
 		0AB5DFB3270F48EB005BFB43 /* LedgerSignerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5DFB2270F48EB005BFB43 /* LedgerSignerViewController.swift */; };
 		0ABAFDB324ACB3B6007EBB92 /* SnackbarCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABAFDB224ACB3B6007EBB92 /* SnackbarCenter.swift */; };
@@ -1250,7 +1250,7 @@
 				0463F5C326296924009C04FA /* FirebaseCrashlytics in Frameworks */,
 				550FB1D22669204800C13D54 /* WalletConnectSwift in Frameworks */,
 				0A29B5622666808A0060F06A /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
-				0AB38241273C2C3600598307 /* WalletConnectSwift in Frameworks */,
+				0AB38241273C2C3600598307 /* (null) in Frameworks */,
 				55D3FE85260A0F66008ABD2B /* Web3 in Frameworks */,
 				0463F5C526296924009C04FA /* FirebaseMessaging in Frameworks */,
 			);
@@ -1897,9 +1897,6 @@
 			children = (
 				0AB9F4C3254C64680044395F /* BalancesViewController */,
 				5503F62A255062070046545C /* CollectiblesViewController */,
-				0ADE253227426A8300BFA9C4 /* MyTableViewController.swift */,
-				0ADE253427426BAA00BFA9C4 /* MyTableViewCell.swift */,
-				0ADE253527426BAA00BFA9C4 /* MyTableViewCell.xib */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -2366,6 +2363,9 @@
 				0471B3BC262742CD001F2D3B /* UpdateAppViewController.xib */,
 				0A28A550273149C900C2BAE0 /* StartViewController.swift */,
 				0A28A551273149C900C2BAE0 /* StartViewController.xib */,
+				0ADE253227426A8300BFA9C4 /* MyTableViewController.swift */,
+				0ADE253427426BAA00BFA9C4 /* MyTableViewCell.swift */,
+				0ADE253527426BAA00BFA9C4 /* MyTableViewCell.xib */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -2973,7 +2973,6 @@
 				0A29B5612666808A0060F06A /* FirebaseAnalyticsWithoutAdIdSupport */,
 				550FB1D12669204800C13D54 /* WalletConnectSwift */,
 				55DA0662269C9411006C9AA5 /* Version */,
-				0AB38240273C2C3600598307 /* WalletConnectSwift */,
 			);
 			productName = Multisig;
 			productReference = 0A93DD532445CC8A00688050 /* Multisig_PROD.app */;
