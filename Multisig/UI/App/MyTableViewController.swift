@@ -9,29 +9,27 @@
 import UIKit
 
 class MyTableViewController: UITableViewController {
-
+    
     var chains: [SCGModels.Chain] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.registerCell(MyTableViewCell.self)
-
         loadData()
-
     }
-
+    
     func loadData() {
         let cgw = App.shared.clientGatewayService
-
+        
         cgw.asyncChains { [weak self] result in
             guard let self = self else {
                 return
             }
-
+            
             switch result {
             case .success(let response):
-
+                
                 DispatchQueue.main.async {
                     self.chains = response.results
                     self.tableView.reloadData()
@@ -51,18 +49,13 @@ class MyTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return chains.count
     }
-
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueCell(MyTableViewCell.self)
-        if (chains.count > indexPath.row) {
-            let chain = chains[indexPath.row]
-            cell.myLabel.text = "Chain #\(chain.chainId): \(chain.chainName)"
-        }
+        let chain = chains[indexPath.row]
+        cell.myLabel.text = "Chain #\(chain.chainId): \(chain.chainName)"
         return cell
     }
-
-
 }
