@@ -14,20 +14,24 @@ class StartViewController: UIViewController {
     
     @IBAction func buttonPressed() {
         print("buttonPressed() | called")
-        let alert = UIAlertController(
-            title: "Hello, world",
-            message: "Slider",
-            preferredStyle: .alert
-        )
-        
-        let action = UIAlertAction(
-            title: "Awesome!",
-            style: .default,
-            handler: nil
-        )
-        
-        alert.addAction(action)
-        present(alert, animated: true, completion: nil)
+//        let alert = UIAlertController(
+//            title: "Hello, world",
+//            message: "Slider",
+//            preferredStyle: .alert
+//        )
+//        
+//        let action = UIAlertAction(
+//            title: "Awesome!",
+//            style: .default,
+//            handler: nil
+//        )
+//        
+//        alert.addAction(action)
+//        present(alert, animated: true, completion: nil)
+
+        let rootVC = MyTableViewController()
+
+        present(rootVC, animated: true, completion: nil)
     }
     
     var myClosure: (String) -> Void = { (name: String) in }

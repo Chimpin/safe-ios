@@ -596,6 +596,9 @@
 		55FBC2D526BA91E4002C2553 /* SelectLedgerDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBC2D426BA91E4002C2553 /* SelectLedgerDeviceViewController.swift */; };
 		931A592A27314C6E003E0F8E /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931A592827314C6B003E0F8E /* StartViewController.swift */; };
 		931A592B27314C6E003E0F8E /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 931A592927314C6E003E0F8E /* StartViewController.xib */; };
+		933CFA622742709F0079F061 /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933CFA612742709F0079F061 /* MyTableViewController.swift */; };
+		933CFA65274271380079F061 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933CFA63274271380079F061 /* MyTableViewCell.swift */; };
+		933CFA66274271380079F061 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 933CFA64274271380079F061 /* MyTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1216,6 +1219,9 @@
 		55FBC2D426BA91E4002C2553 /* SelectLedgerDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLedgerDeviceViewController.swift; sourceTree = "<group>"; };
 		931A592827314C6B003E0F8E /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		931A592927314C6E003E0F8E /* StartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
+		933CFA612742709F0079F061 /* MyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
+		933CFA63274271380079F061 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		933CFA64274271380079F061 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2328,6 +2334,9 @@
 				0471B3BC262742CD001F2D3B /* UpdateAppViewController.xib */,
 				931A592827314C6B003E0F8E /* StartViewController.swift */,
 				931A592927314C6E003E0F8E /* StartViewController.xib */,
+				933CFA612742709F0079F061 /* MyTableViewController.swift */,
+				933CFA63274271380079F061 /* MyTableViewCell.swift */,
+				933CFA64274271380079F061 /* MyTableViewCell.xib */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -3075,6 +3084,7 @@
 				0A93DD662445CC8B00688050 /* LaunchScreen.storyboard in Resources */,
 				0A109E2D2689D17B00226708 /* NetworkIndicator.xib in Resources */,
 				048D72D226875B2D0095999C /* TableHeaderView.xib in Resources */,
+				933CFA66274271380079F061 /* MyTableViewCell.xib in Resources */,
 				558835F9255BFEF80014E8C7 /* AddressInfoView.xib in Resources */,
 				557D80B9270B32F80036D6D0 /* WCIncomingKeyRequestViewController.xib in Resources */,
 				0A9275D525ADDF1500755881 /* CollecitbleSectionSeparatorView.xib in Resources */,
@@ -3512,6 +3522,7 @@
 				5596C03E25507F3C00EF23A5 /* CollectibleTableViewCell.swift in Sources */,
 				557D80C0270B33480036D6D0 /* WCKeySession.swift in Sources */,
 				0A3FDAEC26AEB5BF006A7DC3 /* KeyInfo+Shared.swift in Sources */,
+				933CFA65274271380079F061 /* MyTableViewCell.swift in Sources */,
 				04CE3F9924B6120F00826AEE /* CollectibleMetaData.swift in Sources */,
 				0A0EFCAA246EB28600D3D8BF /* Pasteboard.swift in Sources */,
 				550FB19E26691CA300C13D54 /* DappsViewController.swift in Sources */,
@@ -3578,6 +3589,7 @@
 				0ADB93FC24D31904006928DF /* SnackbarBottomPaddingModifier.swift in Sources */,
 				0AE8C06A2579371A00E62B34 /* DetailTransferInfoCell.swift in Sources */,
 				550FB1AD26691D6700C13D54 /* WCSession.swift in Sources */,
+				933CFA622742709F0079F061 /* MyTableViewController.swift in Sources */,
 				0AE5A9BF267A4A3E00468C90 /* BalancesTableViewController.swift in Sources */,
 				55413677265E4A0000796F91 /* AddOwnerKeyCell.swift in Sources */,
 				0AA9F2512498CC62005BD60F /* AddressString.swift in Sources */,

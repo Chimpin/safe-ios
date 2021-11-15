@@ -205,14 +205,14 @@ class AddDelegateKeyController {
     func sendToBackend(delegateAddress: Address, signature: Data, completion: @escaping (Result<Void, Error>) -> Void) {
         Log.d("---> sendToBackend()")
 
-        clientGatewayService.asyncCreateDelegate(safe: nil,
-                                                 owner: ownerAddress,
-                                                 delegate: delegateAddress,
-                                                 signature: signature,
-                                                 label: "iOS Device Delegate",
-                                                 chainId: chainId) { result in
-            completion(result.map { _ in () })
-        }
+//        clientGatewayService.asyncCreateDelegate(safe: nil,
+//                                                 owner: ownerAddress,
+//                                                 delegate: delegateAddress,
+//                                                 signature: signature,
+//                                                 label: "iOS Device Delegate",
+//                                                 chainId: chainId) { result in
+//            completion(result.map { _ in () })
+//        }
     }
 
     func abortProcess(error: Error) {
