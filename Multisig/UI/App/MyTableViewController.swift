@@ -10,12 +10,23 @@ import UIKit
 
 class MyTableViewController: UITableViewController {
 
+    // 2 sections
+    // "Odd Chains"
+    //   // chainId % 2 == 1
+    // "Even Chains"
+        // chainId % 2 == 0
 
-    var chains: [SCGModels.Chain] = []
+    struct Section {
+        var name: String
+        var chains: [SCGModels.Chain]
+    }
+
+    var sections: [Section] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.registerCell(MyTableViewCell.self)
+        tableView.registerHeaderFooterView(BasicHeaderView.self)
 
         loadChains()
     }
@@ -32,10 +43,7 @@ class MyTableViewController: UITableViewController {
             case .success(let response):
 
                 DispatchQueue.main.async {
-                    // update chains
-                    self.chains = response.results
-                    // reload data in tableview
-                    self.tableView.reloadData()
+                    self.reload(chains: response.results)
                 }
 
             case .failure(let error):
@@ -43,26 +51,43 @@ class MyTableViewController: UITableViewController {
             }
 
         }
+    }
 
+    func reload(chains: [SCGModels.Chain]) {
+        sections = [
+            Section(name: "Odd Chains", chains: chains.filter { $0.chainId.value % 2 == 1 }),
+            Section(name: "Even Chains", chains: chains.filter { $0.chainId.value % 2 == 0 }),
+        ]
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
 
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        return 3
-//    }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        sections.count
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return chains.count
+        sections[section].chains.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueCell(MyTableViewCell.self)
 
-        let chain = chains[indexPath.row]
+        let chain = sections[indexPath.section].chains[indexPath.row]
         cell.myLabel.text = "Chain #\(chain.chainId): \(chain.chainName)"
 
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = tableView.dequeueHeaderFooterView(BasicHeaderView.self)
+        view.setName(sections[section].name)
+        return view
+    }
+
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        BasicHeaderView.headerHeight
     }
 
 }
