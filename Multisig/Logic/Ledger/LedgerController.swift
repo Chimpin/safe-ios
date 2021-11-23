@@ -81,9 +81,20 @@ class LedgerController {
 
                     return
                 }
+
+                // extract signature bytes from the returned message.
                 let dataString = data.toHexString()
-                let v = String(Int(dataString.substr(0, 2)!, radix: 16)! + 4, radix: 16)
+                // get 1st byte, add 4 to it
+                let v = String(
+                    Int(
+                        // get 1st byte (2 characters of hex string)
+                        dataString.substr(0, 2)!,
+                        radix: 16)! + 4, radix: 16)
+
+                // get next 64 bytes (128 characters)
                 let rs = dataString.substr(2, 128)!
+
+                // switching the order because this is how we format signature for sending to transaction service
                 completion(rs + v, nil)
 
             case .failure(_):
