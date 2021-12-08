@@ -32,7 +32,7 @@ xcuserdata/
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
-.vscode
+*.vscode
 vendor
 .bundle
 
